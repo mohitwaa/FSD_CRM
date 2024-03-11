@@ -26,14 +26,14 @@ const userSchema=new mongoose.Schema({
             return /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/.test(v);
         }
     },
-    userType:{
+    usertype:{
         type:String,
         required:true,
         enum:Object.values(userTypes),
         default:userTypes.customer,
         index:true
     },
-    userStatus:{
+    userstatus:{
         type:String,
         required:true,
         enum:Object.values(userStatus),
